@@ -1,0 +1,862 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(village/konoha.jpeg);
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: red;
+    display: block;
+    margin: auto;
+    bottom: 10px;
+    transition: 0.4s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.heading{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    margin-top: 25px;
+}
+.heading h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.heading p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 20px;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+    margin-top: 280px;
+    margin-left: 40px;
+}
+.container .card{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card .content h1{
+    position: absolute;
+    margin-top: -70px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.123);
+    pointer-events: none;
+}
+.container .card .content .hd1 h1{
+    left: 0;
+}
+.container .card .content .hd2 h1{
+    right: 2px;
+}
+.container .card .content .hd3 h1{
+    right: 20px;
+}
+
+.container .card .content h3{
+    font-size: 30px;
+    color: #fff;
+    z-index: 1;
+}
+.container .card .content p{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+}
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.kageinfo{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(village/logo.png);
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+.can1{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    margin-top: 60px;
+    margin-left: 50px;
+    perspective: 1000px;
+}
+.can-inner1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front1, .back1{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+.front1{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(hokage/1hashirama_golem.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+.front1 h2{
+    font-weight: 500;
+    color: red;
+    left: 10px;
+}
+.front1 p{
+    color: #fff;
+    font-size: 15px;
+}
+.back1 button{
+    width: 120px;
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #000;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+.back1{
+    background: #fff;
+    color: #333;
+    padding: 8px 5px;
+    transform: rotateY(180deg);
+}
+.back1 h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.back1 h1 span{
+    font-weight: 400;
+}
+.back1 p{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.back1 img{
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 100px;
+}
+.can1:hover .can-inner1{
+    transform: rotateY(180deg);
+}
+
+/*Second*/
+
+.can2{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    /*margin-top: 60px;*/
+    top: 60px;
+    margin-left: 460px;
+    perspective: 1000px;
+}
+.can-inner2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front2, .back2{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    position: absolute;
+}
+.front2{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(hokage/2tobirama.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+.front2 h2{
+    font-weight: 500;
+    color: red;
+    left: 10px;
+}
+.front2 p{
+    color: #fff;
+    font-size: 15px;
+}
+.back2 button{
+    width: 120px;
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #000;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+.back2{
+    background: #fff;
+    color: #333;
+    padding: 8px 5px;
+    transform: rotateY(180deg);
+}
+.back2 h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.back2 h1 span{
+    font-weight: 400;
+}
+.back2 p{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.back2 img{
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 100px;
+}
+.can2:hover .can-inner2{
+    transform: rotateY(180deg);
+}
+
+/*Third*/
+
+.can3{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-left: 870px;
+    bottom: 340px;
+    perspective: 1000px;
+}
+.can-inner3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front3, .back3{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+.front3{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(hokage/3rd_hokage.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+.front3 h2{
+    font-weight: 500;
+    color: red;
+    left: 10px;
+}
+.front3 p{
+    color: #fff;
+    font-size: 15px;
+}
+.back3 button{
+    width: 120px;
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #000;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+.back3{
+    background: #fff;
+    color: #333;
+    padding: 8px 5px;
+    transform: rotateY(180deg);
+}
+.back3 h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.back3 h1 span{
+    font-weight: 400;
+}
+.back3 p{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.back3 img{
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 100px;
+}
+.can3:hover .can-inner3{
+    transform: rotateY(180deg);
+}
+
+/*Fourth*/
+
+.can4{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    bottom: 200px;
+    margin-left: 40px;
+    perspective: 1000px;
+}
+.can-inner4{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front4, .back4{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+.front4{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(hokage/4rasen_minato.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+.front4 h2{
+    font-weight: 500;
+    color: red;
+    left: 10px;
+}
+.front4 p{
+    color: #fff;
+    font-size: 15px;
+}
+.back4 button{
+    width: 120px;
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #000;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+.back4{
+    background: #fff;
+    color: #333;
+    padding: 8px 5px;
+    transform: rotateY(180deg);
+}
+.back4 h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.back4 h1 span{
+    font-weight: 400;
+}
+.back4 p{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.back4 img{
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 100px;
+}
+.can4:hover .can-inner4{
+    transform: rotateY(180deg);
+}
+
+/*Fifth*/
+
+.can5{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-left: 460px;
+    bottom: 597px;
+    perspective: 1000px;
+}
+.can-inner5{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front5, .back5{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+.front5{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(hokage/5tsunade_standing.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+.front5 h2{
+    font-weight: 500;
+    color: red;
+    left: 10px;
+}
+.front5 p{
+    color: #fff;
+    font-size: 15px;
+}
+.back5 button{
+    width: 120px;
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #000;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+.back5{
+    background: #fff;
+    color: #333;
+    padding: 8px 5px;
+    transform: rotateY(180deg);
+}
+.back5 h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.back5 h1 span{
+    font-weight: 400;
+}
+.back5 p{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.back5 img{
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 100px;
+}
+.can5:hover .can-inner5{
+    transform: rotateY(180deg);
+}
+
+/*Sixth*/
+
+.can6{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-left: 875px;
+    bottom: 996px;
+    perspective: 1000px;
+}
+.can-inner6{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front6, .back6{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+.front6{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(hokage/6kakashi.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+.front6 h2{
+    font-weight: 500;
+    color: red;
+    left: 10px;
+}
+.front6 p{
+    color: #fff;
+    font-size: 15px;
+}
+.back6 button{
+    width: 120px;
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #000;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+.back6{
+    background: #fff;
+    color: #333;
+    padding: 8px 5px;
+    transform: rotateY(180deg);
+}
+.back6 h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.back6 h1 span{
+    font-weight: 400;
+}
+.back6 p{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.back6 img{
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 100px;
+}
+.can6:hover .can-inner6{
+    transform: rotateY(180deg);
+}
+
+/*Naruto*/
+
+.can7{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-left: 457px;
+    bottom: 850px;
+    perspective: 1000px;
+}
+.can-inner7{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front7, .back7{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+.front7{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(hokage/7naruto_so6p.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+.front7 h2{
+    font-weight: 500;
+    color: red;
+    left: 10px;
+}
+.front7 p{
+    color: #fff;
+    font-size: 15px;
+}
+.back7 button{
+    width: 120px;
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #000;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+.back7{
+    background: #fff;
+    color: #333;
+    padding: 8px 5px;
+    transform: rotateY(180deg);
+}
+.back7 h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.back7 h1 span{
+    font-weight: 400;
+}
+.back7 p{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.back7 img{
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 100px;
+}
+.can7:hover .can-inner7{
+    transform: rotateY(180deg);
+}
+
+/*Contact*/
+
+.contactinfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+}
+.box{
+    position: relative;
+    width: 400px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    margin-left: 400px;
+}
+
+.box form{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box form h2{
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.box form .inputbox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.box form .inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.box form .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.box form .inputbox input:valid ~ span,
+.box form .inputbox input:focus ~ span
+{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+.box form .inputbox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.box form .inputbox input:valid ~ i,
+.box form .inputbox input:focus ~ i
+{
+    height: 44px;
+}
+.box form .links{
+    display: flex;
+    justify-content: space-between;
+}
+.box form .links a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2)
+{
+    color: #fff;
+}
+.box form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+}
+.box form input[type="submit"]:active{
+    opacity: 0.8;
+}
+.contact-text{
+    color: #fff;
+    width: 30%;
+    text-align: center;
+}
+.contact-text h1{
+    font-size: 40px;
+    margin-top: 80px;
+}
+.contact-text p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 20px;
+}
